@@ -18,8 +18,6 @@ class Command(BaseCommand):
 
         Category.objects.bulk_create(category_for_create)
 
-
-
         product_list = [
             {'name': 'Po', 'description': 'Kung Fu Panda', 'category': 'Kung Fu Panda', 'purchase_price': '55'},
             {'name': 'Red',

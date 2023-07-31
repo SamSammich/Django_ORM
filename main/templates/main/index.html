@@ -1,19 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1> Types of Pandas </h1>
-<br>
-<form method="post">
-    {% csrf_token %}
-    <input type="text" name="name"/> <br>
-    <input type="emil" name="email"/> <br>
-    <textarea name="message" ></textarea><br>
-    <input type="submit" value="Send" />
+{% extends 'main/base.html' %}
+{% block content %}
+{% for object in object_list %}
+<div class="col">
+    <div class="card shadow-sm">
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c"/>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+        </svg>
+        <div class="card-body">
+            <p class="card-text">
+                <span class="fw-bold">{{ object|title }}</span>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
-</form>
-</body>
-</html>
+{% endblock %}
