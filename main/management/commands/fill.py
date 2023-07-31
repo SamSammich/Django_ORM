@@ -20,13 +20,16 @@ class Command(BaseCommand):
 
         product_list = [
             {'name': 'Po', 'description': 'Kung Fu Panda', 'category': 'Kung Fu Panda', 'purchase_price': '55'},
+
             {'name': 'Red',
              'description': 'The red panda is slightly larger than a domestic cat with a bear-like body and thick russet fur.',
-             'category': 'Red Panda', 'purchase_price': '155'},
+             'category': 'Red Panda', 'purchase_price': '155', },
+
             {'name': 'Panda',
              'description': 'The panda, with its distinctive black and white coat, '
                             'is adored by the world and considered a national treasure in China.',
              'category': 'Giant Panda', 'purchase_price': '125'},
+
             {'name': 'Qinling Panda',
              'description': ' Qinling panda (Ailuropoda melanoleuca qinlingensis ) is a subspecies of '
                             'the giant panda, discovered in the 1960s but not recognized as a subspecies until 2005.',

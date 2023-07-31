@@ -1,19 +1,20 @@
 {% extends 'main/base.html' %}
+{% load mediapath_tag %}
 {% block content %}
+
+
 {% for object in object_list %}
 <div class="col">
     <div class="card shadow-sm">
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"/>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+             <img src="{% mediapath_tag object.image %}" /> <!-- Tag -->
         </svg>
         <div class="card-body">
+            <h1 class="card-title pricing-card-title">$ {{ object.purchase_price}}</h1>
             <p class="card-text">
                 <span class="fw-bold">{{ object|title }}</span>
             </p>
             <div class="d-flex justify-content-between align-items-center">
+
                 <div class="btn-group">
                     <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                     <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>

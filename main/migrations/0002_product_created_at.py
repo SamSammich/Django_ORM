@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='product',
+            model_name='products',
             name='created_at',
             field=models.CharField(default='SOME STRING', max_length=122, verbose_name='CREATED'),
         ),

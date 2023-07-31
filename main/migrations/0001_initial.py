@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Category',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, verbose_name='Name of the product')),
+                ('name', models.CharField(max_length=50, verbose_name='Name of the products')),
                 ('description', models.TextField(max_length=200, verbose_name='Description')),
             ],
             options={
@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             name='Product',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, verbose_name='Name of the product')),
+                ('name', models.CharField(max_length=50, verbose_name='Name of the products')),
                 ('description', models.TextField(max_length=200, verbose_name='Description')),
                 ('image', models.ImageField(upload_to='products/', verbose_name='Photo')),
                 ('category', models.CharField(max_length=100, verbose_name='Category')),
